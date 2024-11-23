@@ -6,16 +6,9 @@ import Input from "./UI/Input.vue";
 import CreateButton from "./UI/CreateButton.vue";
 import { onMounted, ref, toRaw } from "vue";
 import { axiosInstance } from "../plugin/axios.ts";
-import Login from "../pages/Login.vue";
 import formatDate from "../helpers/formatDate.ts";
 
-const modelValue = defineModel();
-
-interface IRequest {
-  premise_id?: string;
-  apartment_id?: any;
-  due_date?: any;
-}
+const modelValue = defineModel<boolean | undefined>();
 
 const props = defineProps<{
   request: any;

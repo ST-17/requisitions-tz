@@ -9,7 +9,7 @@ const togglePasswordVisibility = () => {
   isPasswordVisible.value = !isPasswordVisible.value;
 };
 
-const props = defineProps<{
+defineProps<{
   label?: string;
   type?: string;
   isPassword?: boolean;

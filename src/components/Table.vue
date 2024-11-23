@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import formatDate from "../helpers/formatDate.ts";
 
-const props = defineProps<{
+defineProps<{
   requests?: any[];
 }>();
 
 const emits = defineEmits(["edit-request"]);
 
-const applicantFullname = (applicant) => {
+const applicantFullname = (applicant: any) => {
   const { last_name, first_name, patronymic_name } = applicant;
   const fullNameParts = [last_name, first_name, patronymic_name].filter(
     (part) => part.trim() !== ""

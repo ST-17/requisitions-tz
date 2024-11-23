@@ -2,7 +2,7 @@
 import Input from "../components/UI/Input.vue";
 import Table from "../components/Table.vue";
 import RequestDialog from "../components/RequestDialog.vue";
-import { onMounted, reactive, ref, watch } from "vue";
+import { onMounted, reactive, ref } from "vue";
 import { axiosInstance } from "../plugin/axios.ts";
 import Paginator from "primevue/paginator";
 import ProgressSpinner from "primevue/progressspinner";
@@ -54,7 +54,7 @@ const getPremises = async () => {
   }
 };
 
-const onPageChange = (event) => {
+const onPageChange = (event: any) => {
   filter.page = event.page + 1;
   filter.page_size = event.rows;
   getRequests();
@@ -77,7 +77,7 @@ const onSelect = () => {
 };
 
 const dialogRequest = ref();
-const openDialog = (request) => {
+const openDialog = (request: any) => {
   dialogRequest.value = request;
   isDialogVisible.value = true;
 };

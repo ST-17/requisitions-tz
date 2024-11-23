@@ -10,7 +10,7 @@ const login = ref("");
 const password = ref("");
 
 const errorLabel = ref("");
-const errors = ref({});
+const errors = ref();
 
 const handleLogin = async () => {
   try {
@@ -20,7 +20,7 @@ const handleLogin = async () => {
     });
     localStorage.setItem("@access-token", data?.key);
     router.push("/");
-  } catch (err) {
+  } catch (err: any) {
     errorLabel.value = err?.response?.data.detail;
     errors.value = err?.response?.data.data;
     console.log(err);

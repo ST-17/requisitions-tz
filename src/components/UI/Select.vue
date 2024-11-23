@@ -3,7 +3,7 @@ import { Dropdown, SelectChangeEvent } from "primevue";
 
 const modelValue = defineModel();
 
-const props = defineProps<{
+defineProps<{
   placeholder?: string
   options?: any[]
   loading?: boolean
