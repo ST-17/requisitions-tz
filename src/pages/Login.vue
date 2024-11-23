@@ -12,7 +12,9 @@ const password = ref("");
 const errorLabel = ref("");
 const errors = ref<{
   password: any[];
-}>();
+}>({
+  password: [],
+});
 
 const handleLogin = async () => {
   try {
