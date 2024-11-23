@@ -10,7 +10,9 @@ const login = ref("");
 const password = ref("");
 
 const errorLabel = ref("");
-const errors = ref();
+const errors = ref<{
+  password: any[];
+}>();
 
 const handleLogin = async () => {
   try {
@@ -55,7 +57,7 @@ onMounted(() => {
             v-model:model-value="password"
             icon="lock"
             type="password"
-            :error="errors.password && errors.password[0]"
+            :error="errors.password && errors?.password[0]"
             is-password
             icon-side="left"
           />
@@ -68,7 +70,7 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-.log{
+.log {
   position: absolute;
 }
 .login-container {
