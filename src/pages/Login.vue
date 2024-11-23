@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import { axiosInstance } from "../plugin/axios";
+import { axiosInstance } from "../plugin/axios.ts";
 import { useRouter } from "vue-router";
 import Input from "../components/UI/Input.vue";
 

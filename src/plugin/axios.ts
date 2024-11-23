@@ -1,5 +1,4 @@
 import axios, { AxiosResponse } from "axios";
-import router from "@/router";
 
 const axiosInstance = axios.create({
   baseURL: "https://dev.moydomonline.ru/api",

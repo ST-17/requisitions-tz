@@ -5,9 +5,9 @@ import DatePicker from "primevue/datepicker";
 import Input from "./UI/Input.vue";
 import CreateButton from "./UI/CreateButton.vue";
 import { onMounted, ref, toRaw } from "vue";
-import { axiosInstance } from "../plugin/axios";
+import { axiosInstance } from "../plugin/axios.ts";
 import Login from "../pages/Login.vue";
-import formatDate from "../helpers/formatDate";
+import formatDate from "../helpers/formatDate.ts";
 
 const modelValue = defineModel();
 

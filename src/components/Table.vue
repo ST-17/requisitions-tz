@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import formatDate from "../helpers/formatDate";
+import formatDate from "../helpers/formatDate.ts";
 
 const props = defineProps<{
   requests?: any[];

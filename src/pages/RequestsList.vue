@@ -3,7 +3,7 @@ import Input from "../components/UI/Input.vue";
 import Table from "../components/Table.vue";
 import RequestDialog from "../components/RequestDialog.vue";
 import { onMounted, reactive, ref, watch } from "vue";
-import { axiosInstance } from "../plugin/axios";
+import { axiosInstance } from "../plugin/axios.ts";
 import Paginator from "primevue/paginator";
 import ProgressSpinner from "primevue/progressspinner";
 import Select from "../components/UI/Select.vue";
